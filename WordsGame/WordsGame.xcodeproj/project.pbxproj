@@ -8,17 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		5E67A7332967039E008A9F82 /* WordsGameApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E67A7322967039E008A9F82 /* WordsGameApp.swift */; };
-		5E67A7352967039E008A9F82 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E67A7342967039E008A9F82 /* ContentView.swift */; };
+		5E67A7352967039E008A9F82 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E67A7342967039E008A9F82 /* StartView.swift */; };
 		5E67A737296703A0008A9F82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E67A736296703A0008A9F82 /* Assets.xcassets */; };
 		5E67A73A296703A0008A9F82 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E67A739296703A0008A9F82 /* Preview Assets.xcassets */; };
+		5E67A74229677AF5008A9F82 /* TitleText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E67A74129677AF5008A9F82 /* TitleText.swift */; };
+		5E67A74429677C35008A9F82 /* WordsTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E67A74329677C35008A9F82 /* WordsTextField.swift */; };
+		5E67A74629677FD2008A9F82 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E67A74529677FD2008A9F82 /* GameView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5E67A72F2967039E008A9F82 /* WordsGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordsGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E67A7322967039E008A9F82 /* WordsGameApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsGameApp.swift; sourceTree = "<group>"; };
-		5E67A7342967039E008A9F82 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5E67A7342967039E008A9F82 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		5E67A736296703A0008A9F82 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5E67A739296703A0008A9F82 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5E67A74129677AF5008A9F82 /* TitleText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleText.swift; sourceTree = "<group>"; };
+		5E67A74329677C35008A9F82 /* WordsTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsTextField.swift; sourceTree = "<group>"; };
+		5E67A74529677FD2008A9F82 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +58,8 @@
 			isa = PBXGroup;
 			children = (
 				5E67A7322967039E008A9F82 /* WordsGameApp.swift */,
-				5E67A7342967039E008A9F82 /* ContentView.swift */,
+				5E67A74729677FDC008A9F82 /* Views */,
+				5E67A74029677ADD008A9F82 /* Components */,
 				5E67A736296703A0008A9F82 /* Assets.xcassets */,
 				5E67A738296703A0008A9F82 /* Preview Content */,
 			);
@@ -65,6 +72,24 @@
 				5E67A739296703A0008A9F82 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5E67A74029677ADD008A9F82 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				5E67A74129677AF5008A9F82 /* TitleText.swift */,
+				5E67A74329677C35008A9F82 /* WordsTextField.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		5E67A74729677FDC008A9F82 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5E67A7342967039E008A9F82 /* StartView.swift */,
+				5E67A74529677FD2008A9F82 /* GameView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +162,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E67A7352967039E008A9F82 /* ContentView.swift in Sources */,
+				5E67A7352967039E008A9F82 /* StartView.swift in Sources */,
+				5E67A74229677AF5008A9F82 /* TitleText.swift in Sources */,
 				5E67A7332967039E008A9F82 /* WordsGameApp.swift in Sources */,
+				5E67A74429677C35008A9F82 /* WordsTextField.swift in Sources */,
+				5E67A74629677FD2008A9F82 /* GameView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +301,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -280,7 +310,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ViktorKulia.WordsGame.WordsGame;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ViktorKulia.WordsGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -302,6 +332,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -309,7 +341,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ViktorKulia.WordsGame.WordsGame;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ViktorKulia.WordsGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
