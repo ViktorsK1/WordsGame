@@ -14,29 +14,33 @@ struct StartView: View {
     @State var player2 = ""
     
     @State var isShowedGame = false
-
+    @State var isAlertPresented = false
+    
     
     var body: some View {
         
         VStack {
-
+            
             TitleText(text: "WordsGame")
             
             WordsTextField(word: $bigWord, placeholder: "Put a long word")
                 .padding(20)
                 .padding(.top, 32)
-             
+            
             WordsTextField(word: $player1, placeholder: "Player 1")
                 .cornerRadius(12)
                 .padding(.horizontal, 20)
-
+            
             WordsTextField(word: $player2, placeholder: "Player 2")
                 .cornerRadius(12)
                 .padding(.horizontal, 20)
             
             Button {
-                print("Start button tapped")
-                isShowedGame.toggle()
+                if bigWord.count > 7 {
+                    isShowedGame.toggle()
+                } else {
+                    self.isAlertPresented.toggle()
+                }
             } label: {
                 Text("Start")
                     .font(.custom("AvenirNext-Bold", size: 30))
@@ -47,15 +51,26 @@ struct StartView: View {
                     .cornerRadius(100)
                     .padding(.top)
             }
-        }.background(Image("background"))
-            .fullScreenCover(isPresented: $isShowedGame) {
-                let player1 = Player(name: self.player1)
-                let player2 = Player(name: self.player2)
-                
-                let gameViewModel = GameViewModel(player1: player1, player2: player2, word: bigWord)
+        }
+        .background(Image("background"))
+        .alert("A long word is too short!", isPresented: $isAlertPresented, actions: {
+            Text("OK!")
+        })
+        .fullScreenCover(isPresented: $isShowedGame) {
+            
+            let name1 = player1 == "" ? "Player 1" : player1
+            let name2 = player2 == "" ? "Player 2" : player2
 
-                GameView(viewModel: gameViewModel)
-            }
+            
+            let player1 = Player(name: name1)
+            let player2 = Player(name: name2)
+            
+            let gameViewModel = GameViewModel(player1: player1,
+                                              player2: player2,
+                                              word: bigWord)
+            
+            GameView(viewModel: gameViewModel)
+        }
     }
 }
 

@@ -16,6 +16,7 @@
 		5E67A74229677AF5008A9F82 /* TitleText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E67A74129677AF5008A9F82 /* TitleText.swift */; };
 		5E67A74429677C35008A9F82 /* WordsTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E67A74329677C35008A9F82 /* WordsTextField.swift */; };
 		5E67A74629677FD2008A9F82 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E67A74529677FD2008A9F82 /* GameView.swift */; };
+		5EAA96FC296B23D800E3062D /* WordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAA96FB296B23D800E3062D /* WordCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		5E67A74129677AF5008A9F82 /* TitleText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleText.swift; sourceTree = "<group>"; };
 		5E67A74329677C35008A9F82 /* WordsTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsTextField.swift; sourceTree = "<group>"; };
 		5E67A74529677FD2008A9F82 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		5EAA96FB296B23D800E3062D /* WordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 			children = (
 				5E67A74129677AF5008A9F82 /* TitleText.swift */,
 				5E67A74329677C35008A9F82 /* WordsTextField.swift */,
+				5EAA96FB296B23D800E3062D /* WordCell.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 				5E67A7332967039E008A9F82 /* WordsGameApp.swift in Sources */,
 				5E67A74429677C35008A9F82 /* WordsTextField.swift in Sources */,
 				5E3C3AEE2969AABA0033BDAE /* Player.swift in Sources */,
+				5EAA96FC296B23D800E3062D /* WordCell.swift in Sources */,
 				5E67A74629677FD2008A9F82 /* GameView.swift in Sources */,
 				5E3C3AF32969ABA50033BDAE /* GameViewModel.swift in Sources */,
 			);
